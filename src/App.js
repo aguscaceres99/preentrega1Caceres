@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import NavBar from './components/NavBar'; // Importa el componente NavBar
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* Otros componentes de tu aplicación */}
+      <NavBar />
+      <h1>Contenido de la Tienda</h1>
+      {/* Puedes agregar más contenido aquí */}
     </div>
   );
-}
+};
 
 export default App;
