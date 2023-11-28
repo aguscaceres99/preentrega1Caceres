@@ -1,7 +1,6 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
-import CartWidget from './src/CartWidget';
-import ItemListContainer from './components/ItemListContainer';
+import CartWidget from './cartWidget';
 
 
 
