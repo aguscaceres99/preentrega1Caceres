@@ -1,14 +1,27 @@
 import React from 'react';
-import NavBar from './components/NavBar'; // Importa el componente NavBar
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import ItemListContainer from './components/itemlistcontainer';
+import ItemDetailContainer from './components/itemdetailcontainer';
 
 const App = () => {
   return (
-    <div>
-      {/* Otros componentes de tu aplicación */}
-      <NavBar />
-      <h1>Contenido de la Tienda</h1>
-      {/* Puedes agregar más contenido aquí */}
-    </div>
+    <Router>
+      <div>
+        <NavBar />
+        <Switch>
+          <Route path="/" exact>
+            <ItemListContainer />
+          </Route>
+          <Route path="/category/:categoryName">
+            <ItemListContainer />
+          </Route>
+          <Route path="/item/:itemId">
+            <ItemDetailContainer />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 };
 

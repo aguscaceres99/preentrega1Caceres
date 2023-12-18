@@ -1,16 +1,17 @@
 import React from 'react';
-import { Container, Jumbotron } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
+  // Tu lógica para mostrar una lista de productos
+
   return (
-    <Container>
-      <Jumbotron>
-        <h1>{greeting}</h1>
-        <p>
-          ¡Bienvenido a nuestra tienda! Explora nuestra amplia selección de productos para gamers.
-        </p>
-      </Jumbotron>
-    </Container>
+    <div>
+      <h1>Lista de Productos</h1>
+      {/* Itera sobre la lista de productos y muestra los componentes <Item> */}
+      <Link to="/item/1">Item 1</Link>
+      <Link to="/item/2">Item 2</Link>
+      {/* Agrega más enlaces según sea necesario */}
+    </div>
   );
 };
 

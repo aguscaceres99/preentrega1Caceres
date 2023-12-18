@@ -1,22 +1,28 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
-import CartWidget from './cartWidget';
-
-
+import { Link } from 'react-router-dom';
+import CartWidget from './CartWidget';
 
 const NavBar = () => {
   return (
-    <Navbar bg="dark" variant="dark">
-      <Navbar.Brand href="#home">Tienda Gaming</Navbar.Brand>
-      <Nav className="mr-auto">
-        <Nav.Link href="#home">Inicio</Nav.Link>
-        <Nav.Link href="#categoria1">Categoría 1</Nav.Link>
-        <Nav.Link href="#categoria2">Categoría 2</Nav.Link>
-        <Nav.Link href="#categoria3">Categoría 3</Nav.Link>
-      </Nav>
-      {/* Ubicamos el componente CartWidget en el Navbar */}
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <Link className="navbar-brand" to="/">
+        Tienda Gaming
+      </Link>
+      <ul className="navbar-nav mr-auto">
+        <li className="nav-item">
+          <Link className="nav-link" to="/category/categoria1">
+            Categoría 1
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/category/categoria2">
+            Categoría 2
+          </Link>
+        </li>
+        {/* Agrega más categorías según sea necesario */}
+      </ul>
       <CartWidget />
-    </Navbar>
+    </nav>
   );
 };
 
