@@ -1,16 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import ItemList from './itemlist';
+import { getProducts } from '../api';
 
 const ItemListContainer = () => {
-  // Tu lógica para mostrar una lista de productos
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const fetchedProducts = await getProducts();
+        setProducts(fetchedProducts);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   return (
     <div>
-      <h1>Lista de Productos</h1>
-      {/* Itera sobre la lista de productos y muestra los componentes <Item> */}
-      <Link to="/item/1">Item 1</Link>
-      <Link to="/item/2">Item 2</Link>
-      {/* Agrega más enlaces según sea necesario */}
+      <h1>Productos de la Tienda Gaming</h1>
+      <ItemList products={products} />
     </div>
   );
 };
