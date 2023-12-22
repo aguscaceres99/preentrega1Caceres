@@ -1,15 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './app.css';
-import App from './App';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import ReactDOM from 'react-dom';
+import App from './App';  // Ajusta el nombre del archivo si es necesario
+import './index.css';
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -10,13 +10,13 @@ const NavBar = () => {
       </Link>
       <ul className="navbar-nav mr-auto">
         <li className="nav-item">
-          <Link className="nav-link" to="/category/categoria1">
-            Categoría 1
+          <Link className="nav-link" to="/category/perifericos">
+            Periféricos
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/category/categoria2">
-            Categoría 2
+          <Link className="nav-link" to="/category/monitores">
+            Monitores
           </Link>
         </li>
         {/* Agrega más categorías según sea necesario */}

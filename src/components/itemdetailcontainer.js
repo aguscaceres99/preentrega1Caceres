@@ -1,16 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import ItemDetail from './ItemDetail';
+import { getProductById } from '../api'; // Asegúrate de tener una función getProductById en tu archivo api.js
 
 const ItemDetailContainer = () => {
+  const [item, setItem] = useState(null);
   const { itemId } = useParams();
 
-  // Tu lógica para obtener y mostrar los detalles del producto con el id proporcionado
+  useEffect(() => {
+    const fetchItem = async () => {
+      try {
+        const fetchedItem = await getProductById(itemId);
+        setItem(fetchedItem);
+      } catch (error) {
+        console.error('Error fetching item details:', error);
+      }
+    };
+
+    if (itemId) {
+      fetchItem();
+    }
+  }, [itemId]);
 
   return (
     <div>
-      <h2>Detalles del Producto</h2>
-      <p>ID del Producto: {itemId}</p>
-      {/* Muestra los detalles del producto */}
+      <h1>Detalles del Producto</h1>
+      {item ? <ItemDetail item={item} /> : <p>Cargando detalles...</p>}
     </div>
   );
 };
