@@ -19,7 +19,7 @@ const NavBar = () => {
             Monitores
           </Link>
         </li>
-        {/* Agrega más categorías según sea necesario */}
+        
       </ul>
       <CartWidget />
     </nav>
