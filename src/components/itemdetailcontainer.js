@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import ItemDetail from './ItemDetail';
-import { getProductById } from '../api'; // Asegúrate de tener una función getProductById en tu archivo api.js
+import ItemDetail from './itemdetail';
+import { getProductById } from './api';
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);

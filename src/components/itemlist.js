@@ -1,5 +1,5 @@
 import React from 'react';
-import Item from './itemlist.js';
+import Item from './item';
 
 const ItemList = ({ products }) => {
   return (

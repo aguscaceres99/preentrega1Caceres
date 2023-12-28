@@ -8,7 +8,7 @@ export const getProducts = async () => {
         description: 'Potente laptop para juegos con procesador de última generación y tarjeta gráfica dedicada.',
         price: 1299.99,
         imageUrl: '/imagenes/laptop gamer.jpg',
-        category: 'Computación',
+        category: 'computación',
       },
       {
         id: 2,
@@ -16,7 +16,7 @@ export const getProducts = async () => {
         description: 'Teclado mecánico con retroiluminación RGB para una experiencia de escritura y juego única.',
         price: 79.99,
         imageUrl: '/imagenes/tecladomecanico2.jpg',
-        category: 'Periféricos',
+        category: 'periféricos',
       },
       {
         id: 3,
@@ -24,7 +24,7 @@ export const getProducts = async () => {
         description: 'Monitor de alta resolución para disfrutar de imágenes nítidas y colores vibrantes.',
         price: 499.99,
         imageUrl: '/imagenes/monitor4k.jpg',
-        category: 'Monitores',
+        category: 'monitores',
       },
       {
         id: 4,
@@ -32,7 +32,7 @@ export const getProducts = async () => {
         description: 'Tarjeta gráfica de última generación para rendimiento máximo en juegos y aplicaciones intensivas.',
         price: 799.99,
         imageUrl: '/imagenes/placa.jpg',
-        category: 'Componentes',
+        category: 'componentes',
       },
       {
         id: 5,
@@ -40,7 +40,7 @@ export const getProducts = async () => {
         description: 'Auriculares inalámbricos con sonido envolvente para una experiencia de juego inmersiva.',
         price: 129.99,
         imageUrl: '/imagenes/auriculares.jpg',
-        category: 'Audio',
+        category: 'audio',
       },
     ];
 
